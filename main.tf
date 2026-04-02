@@ -4,6 +4,7 @@ provider "aws" {
 resource "aws_s3_bucket" "demo_bucket" { 
   bucket = "dinakar15-terraform-cicd-demo-bucket-20260401" 
 
-  tags = { Name = "Terraform CICD Demo" 
+  tags = { 
+    Name = "update Terraform CICD Demo" 
   } 
 }
