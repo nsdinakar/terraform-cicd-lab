@@ -1,4 +1,4 @@
-name: Terraform CI/CD Pipeline 
+name: Terraform CI/CD Capstone
 on: 
   push: 
     branches: 
@@ -22,5 +22,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
    
-    - name: Terraform Destroy
-      run: terraform destroy -auto-approve
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Plan
+      run: terraform plan
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
